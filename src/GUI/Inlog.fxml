@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<AnchorPane fx:id="LoginPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LoginController">
+
+   <children>
+      <Label alignment="CENTER" layoutX="282.0" layoutY="22.0" prefHeight="51.0" prefWidth="236.0" stylesheets="@application.css" text="Login Scherm" textAlignment="CENTER" AnchorPane.leftAnchor="282.0" AnchorPane.rightAnchor="282.0" AnchorPane.topAnchor="22.0">
+         <font>
+            <Font name="System Bold" size="35.0" />
+         </font>
+         <styleClass>
+            <String fx:value="scene-title" />
+            <String fx:value="outline" />
+         </styleClass>
+      </Label>
+      <Separator layoutX="63.0" layoutY="96.0" prefHeight="4.0" prefWidth="688.0" AnchorPane.leftAnchor="63.0" AnchorPane.rightAnchor="49.0" AnchorPane.topAnchor="96.0" />
+      <TextField fx:id="usernameField" layoutX="352.0" layoutY="183.0" onAction="#onEnter" prefHeight="51.0" prefWidth="380.0" promptText="username" styleClass="textfield" stylesheets="@application.css" AnchorPane.leftAnchor="352.0" AnchorPane.rightAnchor="68.0">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </TextField>
+      <PasswordField fx:id="passwordField" layoutX="352.0" layoutY="250.0" onAction="#onEnter" prefHeight="51.0" prefWidth="380.0" promptText="password" styleClass="textfield" stylesheets="@application.css" AnchorPane.leftAnchor="352.0" AnchorPane.rightAnchor="68.0">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </PasswordField>
+      <Button fx:id="btnLogin" layoutX="324.0" layoutY="365.0" mnemonicParsing="false" onAction="#btnloginclicked" prefHeight="66.0" prefWidth="153.0" stylesheets="@application.css" text="Login" AnchorPane.leftAnchor="324.0" AnchorPane.rightAnchor="323.0">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <styleClass>
+            <String fx:value="button-big" />
+            <String fx:value="button-bold" />
+         </styleClass>
+      </Button>
+      <Button fx:id="btnRegister" layoutX="87.0" layoutY="365.0" mnemonicParsing="false" onAction="#btnregisterclicked" prefHeight="66.0" prefWidth="153.0" stylesheets="@application.css" text="Registreren" AnchorPane.leftAnchor="87.0" AnchorPane.rightAnchor="560.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <styleClass>
+            <String fx:value="button-big" />
+            <String fx:value="button-bold" />
+         </styleClass>
+      </Button>
+      <Button fx:id="btnClose" layoutX="579.0" layoutY="365.0" mnemonicParsing="false" onAction="#btnclosedclicked" prefHeight="66.0" prefWidth="153.0" stylesheets="@application.css" text="Afsluiten" AnchorPane.leftAnchor="579.0" AnchorPane.rightAnchor="68.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <styleClass>
+            <String fx:value="button-big" />
+            <String fx:value="button-bold" />
+         </styleClass>
+      </Button>
+   </children>
+</AnchorPane>

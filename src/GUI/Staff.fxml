@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane fx:id="StaffPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.StaffController">
+   <top>
+      <HBox prefHeight="52.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Region prefHeight="200.0" prefWidth="126.0" />
+            <Label alignment="CENTER" prefHeight="51.0" prefWidth="349.0" styleClass="scene-title" stylesheets="@application.css" text="Mederwerkers panel" />
+            <Region prefHeight="100.0" prefWidth="126.0" />
+         </children>
+      </HBox>
+   </top>
+   <left>
+      <VBox prefHeight="348.0" prefWidth="155.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="btnCooking" mnemonicParsing="false" onAction="#btnCookingClicked" styleClass="button-normal4" stylesheets="@application.css" text="Ga bereiden!">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="btnInDeOven" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#btnInDeOvenClicked" styleClass="button-normal4" stylesheets="@application.css" text="In de oven!">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="btnKlaar" layoutX="10.0" layoutY="41.0" mnemonicParsing="false" onAction="#btnKlaarClicked" styleClass="button-normal4" stylesheets="@application.css" text="Klaar">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="btnAdresVerkrijgen" layoutX="10.0" layoutY="72.0" mnemonicParsing="false" onAction="#btnAdresVerkrijgenClicked" styleClass="button-normal4" stylesheets="@application.css" text="Adres verkrijgen">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="btnRefresh" layoutX="10.0" layoutY="103.0" mnemonicParsing="false" onAction="#btnRefreshClicked" styleClass="button-normal4" stylesheets="@application.css" text="Refresh">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="btnLogUit" layoutX="10.0" layoutY="134.0" mnemonicParsing="false" onAction="#btnLogUitClicked" stylesheets="@application.css" text="Loguit">
+               <styleClass>
+                  <String fx:value="button-normal4" />
+                  <String fx:value="button-bold" />
+               </styleClass>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <ListView fx:id="list" prefHeight="328.0" prefWidth="428.0" styleClass="list" stylesheets="@application.css" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

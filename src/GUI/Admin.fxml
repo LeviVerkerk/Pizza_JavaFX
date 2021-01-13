@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane fx:id="admin" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="339.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AdminController">
+   <top>
+      <HBox prefHeight="63.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Region layoutX="308.0" layoutY="10.0" prefHeight="200.0" prefWidth="151.0" />
+            <Label styleClass="scene-title" stylesheets="@application.css" text="Pizza admin panel">
+               <HBox.margin>
+                  <Insets top="5.0" />
+               </HBox.margin></Label>
+            <Region prefHeight="200.0" prefWidth="151.0" />
+         </children>
+      </HBox>
+   </top>
+   <left>
+      <VBox prefHeight="233.0" prefWidth="207.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label styleClass="admin-label" stylesheets="@application.css" text="Kosten extras:                    €">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" top="10.0" />
+               </VBox.margin>
+            </Label>
+            <Label layoutX="20.0" layoutY="20.0" styleClass="admin-label" stylesheets="@application.css" text="Kosten groter:                    €">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" top="10.0" />
+               </VBox.margin>
+            </Label>
+            <Label layoutX="20.0" layoutY="61.0" styleClass="admin-label" stylesheets="@application.css" text="Bezorg kosten:                   €">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" top="10.0" />
+               </VBox.margin>
+            </Label>
+            <Label layoutX="20.0" layoutY="102.0" styleClass="admin-label" stylesheets="@application.css" text="Standaard prijs:                 €">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" top="10.0" />
+               </VBox.margin>
+            </Label>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="extracostField" styleClass="textfield-small" stylesheets="@application.css">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" top="8.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField fx:id="sizecostField" styleClass="textfield-small" stylesheets="@application.css">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" top="2.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField fx:id="delcostField" styleClass="textfield-small" stylesheets="@application.css">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" top="4.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField fx:id="standardpriceField" styleClass="textfield-small" stylesheets="@application.css">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" top="2.0" />
+               </VBox.margin>
+            </TextField>
+         </children>
+      </VBox>
+   </center>
+   <right>
+      <VBox prefHeight="356.0" prefWidth="193.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="btnAanpassenex" mnemonicParsing="false" onAction="#btnAanpassenexClicked" styleClass="button-normal2" stylesheets="@application.css" text="Aanpassen">
+               <VBox.margin>
+                  <Insets left="20.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="btnAanpassensize" mnemonicParsing="false" onAction="#btnAanpassensizeClicked" styleClass="button-normal2" stylesheets="@application.css" text="Aanpassen">
+               <VBox.margin>
+                  <Insets left="20.0" top="15.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="btnAanpassendel" mnemonicParsing="false" onAction="#btnAanpassendelClicked" styleClass="button-normal2" stylesheets="@application.css" text="Aanpassen">
+               <VBox.margin>
+                  <Insets left="20.0" top="17.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="btnAanpassenstan" mnemonicParsing="false" onAction="#btnAanpassenstanClicked" styleClass="button-normal2" stylesheets="@application.css" text="Aanpassen">
+               <VBox.margin>
+                  <Insets left="20.0" top="16.0" />
+               </VBox.margin>
+            </Button>
+         </children></VBox>
+   </right>
+   <bottom>
+      <VBox prefHeight="81.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="43.0" prefWidth="600.0">
+               <children>
+                  <Region prefHeight="40.0" prefWidth="49.0" />
+                  <Button fx:id="btnRegistreerNieuweAdministrator" mnemonicParsing="false" onAction="#btnRegistreerNieuweAdministratorClicked" styleClass="button-normal4" stylesheets="@application.css" text="Registreer nieuwe administrator">
+                     <HBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="btnGoToDB" mnemonicParsing="false" onAction="#btnGoToDBClicked" styleClass="button-normal4" stylesheets="@application.css" text="Ga naar DB Manager">
+                     <HBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Region layoutX="10.0" layoutY="10.0" prefHeight="40.0" prefWidth="122.0" />
+               </children>
+            </HBox>
+            <HBox prefHeight="44.0" prefWidth="600.0">
+               <children>
+                  <Region prefHeight="200.0" prefWidth="250.0" />
+                  <Button fx:id="btnLogUit" mnemonicParsing="false" onAction="#btnLogUitClicked" prefHeight="31.0" prefWidth="100.0" stylesheets="@application.css" text="Log uit">
+                     <HBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </HBox.margin>
+                     <styleClass>
+                        <String fx:value="button-bold" />
+                        <String fx:value="button-big" />
+                     </styleClass>
+                  </Button>
+                  <Region prefHeight="200.0" prefWidth="250.0" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </bottom>
+</BorderPane>

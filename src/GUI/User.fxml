@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane fx:id="PizzaUser" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="487.0" prefWidth="666.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.OrderController">
+   <top>
+      <AnchorPane prefHeight="59.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="212.0" layoutY="6.0" styleClass="scene-title" stylesheets="@application.css" text="Pizza bestellen" />
+         </children>
+      </AnchorPane>
+   </top>
+   <left>
+      <VBox prefHeight="338.0" prefWidth="155.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label styleClass="normal-label" stylesheets="@application.css" text="Pizza grootte:">
+               <VBox.margin>
+                  <Insets left="10.0" top="5.0" />
+               </VBox.margin>
+            </Label>
+            <Label styleClass="normal-label" stylesheets="@application.css" text="Ingredienten:">
+               <VBox.margin>
+                  <Insets left="10.0" top="55.0" />
+               </VBox.margin>
+            </Label>
+            <Label styleClass="normal-label" stylesheets="@application.css" text="Bezorg opties:">
+               <VBox.margin>
+                  <Insets left="10.0" top="130.0" />
+               </VBox.margin>
+            </Label>
+            <Button fx:id="btnTrack" mnemonicParsing="false" onAction="#tackClicked" stylesheets="@application.css" text="Tack and Trace">
+               <styleClass>
+                  <String fx:value="button-normal4" />
+                  <String fx:value="button-bold" />
+               </styleClass>
+               <VBox.margin>
+                  <Insets left="10.0" top="50.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="btnLogUit" mnemonicParsing="false" onAction="#logoutClicked" stylesheets="@application.css" text="Loguit">
+               <styleClass>
+                  <String fx:value="button-normal4" />
+                  <String fx:value="button-bold" />
+               </styleClass>
+               <VBox.margin>
+                  <Insets left="10.0" top="20.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <VBox prefHeight="338.0" prefWidth="206.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="88.0" prefWidth="311.0">
+               <children>
+                  <HBox prefHeight="31.0" prefWidth="245.0">
+                     <children>
+                        <RadioButton fx:id="smallsize" mnemonicParsing="false" prefHeight="37.0" prefWidth="116.0" styleClass="radiobutton" stylesheets="@application.css" text="Klein">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="size" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="mediumsize" mnemonicParsing="false" prefHeight="39.0" prefWidth="133.0" styleClass="radiobutton" stylesheets="@application.css" text="Medium" toggleGroup="$size" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="38.0" prefWidth="237.0">
+                     <children>
+                        <RadioButton fx:id="bigsize" mnemonicParsing="false" prefHeight="38.0" prefWidth="115.0" styleClass="radiobutton" stylesheets="@application.css" text="Groot" toggleGroup="$size" />
+                        <RadioButton fx:id="extrabigsize" mnemonicParsing="false" prefHeight="39.0" prefWidth="133.0" styleClass="radiobutton" stylesheets="@application.css" text="Extra groot" toggleGroup="$size" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="151.0" prefWidth="219.0">
+               <children>
+                  <HBox prefHeight="37.0" prefWidth="200.0">
+                     <children>
+                        <CheckBox fx:id="choicecheese" mnemonicParsing="false" prefHeight="37.0" prefWidth="100.0" styleClass="radiobutton" stylesheets="@application.css" text="Kaas" />
+                        <CheckBox fx:id="choiceham" mnemonicParsing="false" styleClass="radiobutton" stylesheets="@application.css" text="Ham" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="37.0" prefWidth="200.0">
+                     <children>
+                        <CheckBox fx:id="choicesalami" mnemonicParsing="false" prefHeight="37.0" prefWidth="100.0" styleClass="radiobutton" stylesheets="@application.css" text="Salami" />
+                        <CheckBox fx:id="choicemushroom" mnemonicParsing="false" prefHeight="37.0" prefWidth="120.0" styleClass="radiobutton" stylesheets="@application.css" text="Champignon" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="37.0" prefWidth="200.0">
+                     <children>
+                        <CheckBox fx:id="choicetuna" mnemonicParsing="false" prefHeight="37.0" prefWidth="100.0" styleClass="radiobutton" stylesheets="@application.css" text="Tonijn" />
+                        <CheckBox fx:id="choicemeat" mnemonicParsing="false" prefHeight="37.0" prefWidth="100.0" styleClass="radiobutton" stylesheets="@application.css" text="Extra vlees" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="37.0" prefWidth="200.0">
+                     <children>
+                        <CheckBox fx:id="choiceveg" mnemonicParsing="false" prefHeight="37.0" prefWidth="113.0" styleClass="radiobutton" stylesheets="@application.css" text="Extra groente" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <HBox prefHeight="38.0" prefWidth="219.0">
+                     <children>
+                        <RadioButton fx:id="choicetake" mnemonicParsing="false" prefHeight="37.0" prefWidth="100.0" styleClass="radiobutton" stylesheets="@application.css" text="Afhalen">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="del" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="choicedeliver" mnemonicParsing="false" prefHeight="37.0" prefWidth="100.0" styleClass="radiobutton" stylesheets="@application.css" text="Bezorgen" toggleGroup="$del" />
+                     </children>
+                  </HBox>
+                  <VBox fx:id="fields" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <HBox prefHeight="33.0" prefWidth="219.0">
+                           <children>
+                              <TextField fx:id="nameField" prefHeight="31.0" prefWidth="109.0" promptText="naam" styleClass="textfield-small" stylesheets="@application.css" />
+                              <TextField fx:id="phoneField" prefHeight="31.0" prefWidth="109.0" promptText="telefoon" styleClass="textfield-small" stylesheets="@application.css" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="33.0" prefWidth="219.0">
+                           <children>
+                              <TextField fx:id="adressField" prefHeight="31.0" prefWidth="109.0" promptText="adres" styleClass="textfield-small" stylesheets="@application.css" />
+                              <TextField fx:id="cityField" prefHeight="31.0" prefWidth="109.0" promptText="woonplaats" styleClass="textfield-small" stylesheets="@application.css" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="150.0" prefWidth="219.0">
+               <children>
+                  <Button fx:id="totalbutton" mnemonicParsing="false" onAction="#totalClicked" prefHeight="31.0" prefWidth="65.0" styleClass="button-normal4" stylesheets="@application.css" text="Totaal">
+                     <VBox.margin>
+                        <Insets left="77.0" right="77.0" top="5.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="sendbutton" disable="true" mnemonicParsing="false" onAction="#sendClicked" prefHeight="31.0" prefWidth="99.0" styleClass="button-normal4" stylesheets="@application.css" text="Verzenden">
+                     <VBox.margin>
+                        <Insets left="60.0" right="60.0" top="5.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </center>
+   <right>
+      <AnchorPane prefHeight="338.0" prefWidth="292.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextArea fx:id="output" layoutX="15.0" layoutY="16.0" prefHeight="396.0" prefWidth="263.0" />
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>

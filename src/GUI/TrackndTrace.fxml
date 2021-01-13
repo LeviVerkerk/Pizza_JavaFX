@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox fx:id="track" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="302.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.TrackController">
+   <children>
+      <HBox prefHeight="84.0" prefWidth="600.0">
+         <children>
+            <Region prefHeight="84.0" prefWidth="116.0" />
+            <Label fx:id="lblorder" stylesheets="@application.css" text="Uw bestelling wordt gebakken!">
+               <styleClass>
+                  <String fx:value="scene-title" />
+                  <String fx:value="track-text" />
+               </styleClass>
+               <HBox.margin>
+                  <Insets top="15.0" />
+               </HBox.margin>
+            </Label>
+            <Region prefHeight="84.0" prefWidth="116.0" />
+         </children>
+      </HBox>
+      <Separator prefWidth="200.0" />
+      <HBox prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#back" styleClass="button-big" stylesheets="@application.css" text="Terug naar bestelscherm">
+               <HBox.margin>
+                  <Insets bottom="20.0" left="70.0" right="25.0" top="20.0" />
+               </HBox.margin>
+            </Button>
+            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#loguit" stylesheets="@application.css" text="Log uit">
+               <styleClass>
+                  <String fx:value="button-big" />
+                  <String fx:value="button-bold" />
+               </styleClass>
+               <HBox.margin>
+                  <Insets bottom="20.0" left="35.0" right="25.0" top="20.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+      <Separator prefWidth="200.0" />
+      <HBox prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Button fx:id="btnRefresh" mnemonicParsing="false" onAction="#refresh" stylesheets="@application.css" text="Refresh">
+               <styleClass>
+                  <String fx:value="button-big" />
+                  <String fx:value="button-bold" />
+               </styleClass>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <HBox.margin>
+                  <Insets bottom="27.5" left="248.5" right="248.5" top="27.5" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</VBox>
